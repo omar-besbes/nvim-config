@@ -1,5 +1,5 @@
+-- Vim options
 -- Only write changes that differ from default configuration
-
 
 -- Print the number in front of each line
 vim.opt.number = true
@@ -39,8 +39,15 @@ vim.opt.isfname:append("@-@")
 -- If this many milliseconds nothing is typed, the swap file will be written to disk
 vim.opt.updatetime = 500
 
+
+-- Remaps
+
 -- Set leader key to space
 vim.g.mapleader = ','
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+
+-- Misc
 
 -- Set kanagawa theme
 vim.cmd.colorscheme("kanagawa-dragon")
