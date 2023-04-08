@@ -39,3 +39,9 @@ vim.opt.isfname:append("@-@")
 -- If this many milliseconds nothing is typed, the swap file will be written to disk
 vim.opt.updatetime = 500
 
+-- Set leader key to space
+vim.g.mapleader = ','
+
+-- Set kanagawa theme
+vim.cmd.colorscheme("kanagawa-dragon")
+
