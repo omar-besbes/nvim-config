@@ -25,5 +25,8 @@ return require('packer').startup(function(use)
 	use 'prichrd/netrw.nvim'
 	use 'nvim-tree/nvim-web-devicons'
 
+	-- Get git wrapper
+	use 'tpope/vim-fugitive'
+
 end)
 
