@@ -43,6 +43,9 @@ return require('packer').startup(function(use)
 			},
 			{'williamboman/mason-lspconfig.nvim'}, -- Optional
 
+			-- Progress spinner
+			{'j-hui/fidget.nvim'},
+
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},     -- Required
 			{'hrsh7th/cmp-nvim-lsp'}, -- Required
