@@ -1,5 +1,4 @@
 -- Only required if you have packer configured as `opt`
-vim.cmd.packadd('packer.nvim')
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
@@ -21,12 +20,16 @@ return require('packer').startup(function(use)
 	-- Get undotree
 	use 'mbbill/undotree'
 
-	-- Get netrw customizations
-	use 'prichrd/netrw.nvim'
+	-- Get nvim-tree file explorer
+	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-tree/nvim-web-devicons'
 
 	-- Get git wrapper
 	use 'tpope/vim-fugitive'
+	use {
+		'lewis6991/gitsigns.nvim',
+		tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+	}
 
 	-- Get LSP
 	use {
@@ -38,7 +41,7 @@ return require('packer').startup(function(use)
 			{                                      -- Optional
 				'williamboman/mason.nvim',
 				run = function()
-				pcall(vim.cmd, 'MasonUpdate')
+					pcall(vim.cmd, 'MasonUpdate')
 				end,
 			},
 			{'williamboman/mason-lspconfig.nvim'}, -- Optional

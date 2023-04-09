@@ -4,6 +4,9 @@
 -- Print the number in front of each line
 vim.opt.number = true
 
+-- Highlight current line
+vim.opt.cursorline = true
+
 -- Cursor
 vim.opt.guicursor = 'a:ver1,i:blinkon1'
 
@@ -46,11 +49,15 @@ vim.opt.clipboard = 'unnamedplus'
 vim.o.completeopt = 'menuone,noselect'
 
 
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+
 -- Remaps
 
 -- Set leader key to space
 vim.g.mapleader = ','
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 
 -- Misc
