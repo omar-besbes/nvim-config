@@ -1,4 +1,4 @@
-require('nvim-web-devicons').setup {
+require('nvim-web-devicons').setup({
 	-- globally enable different highlight colors per icon (default to true)
 	-- if set to false all icons will have the default icon's color
 	color_icons = true;
@@ -10,5 +10,5 @@ require('nvim-web-devicons').setup {
 	-- prevents cases when file doesn't have any extension but still gets some icon
 	-- because its name happened to match some extension (default to false)
 	strict = true;
-}
+})
 
