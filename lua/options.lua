@@ -39,6 +39,12 @@ vim.opt.isfname:append("@-@")
 -- If this many milliseconds nothing is typed, the swap file will be written to disk
 vim.opt.updatetime = 500
 
+-- Sync clipboard between OS and Neovim
+vim.opt.clipboard = 'unnamedplus'
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
+
 
 -- Remaps
 
