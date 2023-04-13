@@ -2,37 +2,37 @@
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+	use ('wbthomason/packer.nvim')
 
-	-- Get kanagawa theme
-	use 'rebelot/kanagawa.nvim'
+	-- Get themes
+	use ('rebelot/kanagawa.nvim')
 
 	-- Get a fuzzy finder
-	use {
+	use ({
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+	})
 
 	-- Get treesitter
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 	-- Get undotree
-	use 'mbbill/undotree'
+	use ('mbbill/undotree')
 
 	-- Get nvim-tree file explorer
-	use 'nvim-tree/nvim-tree.lua'
-	use 'nvim-tree/nvim-web-devicons'
+	use ('nvim-tree/nvim-tree.lua')
+	use ('nvim-tree/nvim-web-devicons')
 
 	-- Get git wrapper
-	use 'tpope/vim-fugitive'
-	use {
+	use ('tpope/vim-fugitive')
+	use ({
 		'lewis6991/gitsigns.nvim',
 		tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
-	}
+	})
 
 	-- Get LSP
-	use {
+	use ({
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
 		requires = {
@@ -54,13 +54,19 @@ return require('packer').startup(function(use)
 			{'hrsh7th/cmp-nvim-lsp'}, -- Required
 			{'L3MON4D3/LuaSnip'},     -- Required
 		}
-	}
+	})
 
 	-- Get custom status line
-	use {
+	use ({
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-	}
+	})
+
+	-- Lua
+	use ({
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
 
 end)
 
