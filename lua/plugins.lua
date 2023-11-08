@@ -1,5 +1,7 @@
 -- Only required if you have packer configured as `opt`
 
+local bootstrap = require("plugin-manager").ensure_plugin_manager()
+
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use ('wbthomason/packer.nvim')
@@ -67,6 +69,10 @@ return require('packer').startup(function(use)
 		"folke/trouble.nvim",
 		requires = "nvim-tree/nvim-web-devicons",
 	})
+
+	if bootstrap then
+		require('packer').sync()
+	end
 
 end)
 
