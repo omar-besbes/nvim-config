@@ -1,6 +1,6 @@
 -- Only required if you have packer configured as `opt`
 
-local bootstrap = require("plugin-manager").ensure_plugin_manager()
+local bootstrap = require("plugin-manager")
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself

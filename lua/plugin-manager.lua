@@ -16,3 +16,5 @@ local ensure_plugin_manager = function()
 		return false
 	end
 end
+
+return ensure_plugin_manager()
