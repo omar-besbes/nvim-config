@@ -63,5 +63,5 @@ vim.g.mapleader = ','
 -- Misc
 
 -- Set kanagawa theme
-vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd.colorscheme("kanagawa")
 

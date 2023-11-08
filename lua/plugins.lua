@@ -4,10 +4,10 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use ('wbthomason/packer.nvim')
 
-	-- Get themes
+	-- color theme
 	use ('rebelot/kanagawa.nvim')
 
-	-- Get a fuzzy finder
+	-- fuzzy finder
 	use ({
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		-- or                            , branch = '0.1.x',
@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
 			{'williamboman/mason-lspconfig.nvim'}, -- Optional
 
 			-- Progress spinner
-			{'j-hui/fidget.nvim'},
+			{'j-hui/fidget.nvim', tag = "legacy"},
 
 			-- Autocompletion
 			{'hrsh7th/nvim-cmp'},     -- Required
