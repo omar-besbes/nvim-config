@@ -11,7 +11,7 @@ vim.opt.updatetime = 500												-- If this many milliseconds nothing is type
 vim.g.mapleader = ','													-- Set leader key to hyphen
 
 -- Cursor
-vim.opt.guicursor = 'a:ver1,i:blinkon1'
+vim.opt.guicursor = 'a:ver1,n:block'								-- see :h guicursor
 vim.opt.cursorline = true												-- Highlight current line
 
 -- Indentation
