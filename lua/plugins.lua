@@ -37,16 +37,13 @@ return require('packer').startup(function(use)
 	-- Get LSP
 	use ({
 		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
+		branch = 'v3.x',
 		requires = {
 			-- LSP Support
 			{'neovim/nvim-lspconfig'},             -- Required
-			{                                      -- Optional
-				'williamboman/mason.nvim',
-				run = function()
-					pcall(vim.cmd, 'MasonUpdate')
-				end,
-			},
+
+			-- Manage LSP servers from neovim
+			{'williamboman/mason.nvim'},				-- Optional
 			{'williamboman/mason-lspconfig.nvim'}, -- Optional
 
 			-- Progress spinner
