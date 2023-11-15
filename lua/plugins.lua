@@ -7,7 +7,8 @@ return require('packer').startup(function(use)
 	use ('wbthomason/packer.nvim')
 
 	-- color theme
-	use ('rebelot/kanagawa.nvim')
+	-- use ('rebelot/kanagawa.nvim')
+	use { 'catppuccin/nvim', as = 'catppuccin' }
 
 	-- fuzzy finder
 	use ({
@@ -17,7 +18,7 @@ return require('packer').startup(function(use)
 	})
 
 	-- Get treesitter
-	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
 	-- Get undotree
 	use ('mbbill/undotree')
@@ -66,8 +67,8 @@ return require('packer').startup(function(use)
 
 	-- Lua
 	use ({
-		"folke/trouble.nvim",
-		requires = "nvim-tree/nvim-web-devicons",
+		'folke/trouble.nvim',
+		requires = 'nvim-tree/nvim-web-devicons',
 	})
 
 	if bootstrap then
