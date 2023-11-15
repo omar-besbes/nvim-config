@@ -68,6 +68,9 @@ return require('packer').startup(function(use)
 		requires = 'nvim-tree/nvim-web-devicons',
 	})
 
+	-- Key bindings autocomplete
+	use ('folke/which-key.nvim')
+
 	if bootstrap then
 		require('packer').sync()
 	end
