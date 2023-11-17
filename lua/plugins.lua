@@ -7,7 +7,6 @@ return require('packer').startup(function(use)
 	use ('wbthomason/packer.nvim')
 
 	-- color theme
-	-- use ('rebelot/kanagawa.nvim')
 	use { 'catppuccin/nvim', as = 'catppuccin' }
 
 	-- fuzzy finder
@@ -17,7 +16,7 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	})
 
-	-- Get treesitter
+	-- Get treesitter for syntax highlights
 	use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
 	-- Get undotree
@@ -46,13 +45,18 @@ return require('packer').startup(function(use)
 			{'williamboman/mason.nvim'},				-- Optional
 			{'williamboman/mason-lspconfig.nvim'}, -- Optional
 
+			-- Nvim lua api signature help, docs and autocomplete 
+			{'folke/neodev.nvim'},						-- Optional
+
 			-- Progress spinner
-			{'j-hui/fidget.nvim', tag = "legacy"},
+			{'j-hui/fidget.nvim', tag = "legacy"}, -- Optional
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},     -- Required
-			{'hrsh7th/cmp-nvim-lsp'}, -- Required
-			{'L3MON4D3/LuaSnip'},     -- Required
+			{'hrsh7th/nvim-cmp'},						-- Required
+			{'hrsh7th/cmp-nvim-lsp'},					-- Required
+			{'L3MON4D3/LuaSnip'},						-- Required
+			-- Adds a number of user-friendly snippets
+			{'rafamadriz/friendly-snippets'},		-- Optional
 		}
 	})
 

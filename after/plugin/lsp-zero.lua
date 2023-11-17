@@ -5,7 +5,10 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- Configure language servers locally for neovim using mason
-require('mason').setup({
+local mason = require('mason')
+local mason_lspconfig = require('mason-lspconfig')
+
+mason.setup({
 	ui = {
 		icons = {
 			package_installed = "✓",
@@ -18,7 +21,7 @@ require('mason').setup({
 		}
 	}
 })
-require('mason-lspconfig').setup({
+mason_lspconfig.setup({
 	ensure_installed = {
 		'bashls',
 		'clangd',
@@ -43,9 +46,11 @@ require('mason-lspconfig').setup({
 })
 
 -- Customizing the autocompletion menu
+local neodev = require("neodev")
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
+neodev.setup()
 cmp.setup({
 	sources = {
 		{ name = 'path' },
