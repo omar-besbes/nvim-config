@@ -75,6 +75,9 @@ return require('packer').startup(function(use)
 	-- Key bindings autocomplete
 	use ('folke/which-key.nvim')
 
+	-- Terminal sessions
+	use ({ 'akinsho/toggleterm.nvim', tag = '*' })
+
 	if bootstrap then
 		require('packer').sync()
 	end
