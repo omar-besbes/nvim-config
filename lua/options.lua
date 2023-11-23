@@ -32,3 +32,6 @@ vim.opt.relativenumber = true											-- Show the line number relative to the 
 vim.opt.undofile = true													-- Use an undo history file
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"		-- Undo files directroy
 
+-- Mouse
+vim.opt.mouse = ""
+
