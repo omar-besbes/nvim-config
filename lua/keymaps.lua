@@ -1,13 +1,13 @@
 -- navigation between windows
-vim.keymap.set('n', '<C-h>', '<C-w>h')
-vim.keymap.set('n', '<C-j>', '<C-w>j')
-vim.keymap.set('n', '<C-k>', '<C-w>k')
-vim.keymap.set('n', '<C-l>', '<C-w>l')
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to left window'		})
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Go to bottom window'	})
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Go to top window'		})
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Go to right window'  })
 
-vim.keymap.set('t', '<C-h>', '<cmd>wincmd h<CR>')
-vim.keymap.set('t', '<C-j>', '<cmd>wincmd j<CR>')
-vim.keymap.set('t', '<C-k>', '<cmd>wincmd k<CR>')
-vim.keymap.set('t', '<C-l>', '<cmd>wincmd l<CR>')
+vim.keymap.set('t', '<C-h>', '<cmd>wincmd h<CR>', { desc = 'Go to left window'		})
+vim.keymap.set('t', '<C-j>', '<cmd>wincmd j<CR>', { desc = 'Go to bottom window'	})
+vim.keymap.set('t', '<C-k>', '<cmd>wincmd k<CR>', { desc = 'Go to top window'		})
+vim.keymap.set('t', '<C-l>', '<cmd>wincmd l<CR>', { desc = 'Go to right window'	})
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

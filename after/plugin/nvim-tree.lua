@@ -27,7 +27,7 @@ local function open_nvim_tree_on_startup(data)
 
 end
 
-vim.keymap.set('n', '<leader>fs', vim.cmd.NvimTreeFocus)
+vim.keymap.set('n', '<leader>fs', vim.cmd.NvimTreeFocus, { desc = 'Focus file explorer' })
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree_on_startup })
 
 -- Nvim-tree setup

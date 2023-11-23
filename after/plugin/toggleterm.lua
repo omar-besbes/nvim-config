@@ -1,5 +1,5 @@
-vim.keymap.set('n', '<leader>t', vim.cmd.ToggleTerm)
-vim.keymap.set('n', '<leader>tt', function() vim.cmd.ToggleTerm('direction=vertical') end)
+vim.keymap.set('n', '<leader>t',		vim.cmd.ToggleTerm,													{ desc = 'Toggle floating terminal' })
+vim.keymap.set('n', '<leader>tt',	function() vim.cmd.ToggleTerm('direction=vertical') end, { desc = 'Toggle vertical terminal' })
 
 require("toggleterm").setup({
 	size = function(term)
