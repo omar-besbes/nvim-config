@@ -27,7 +27,17 @@ return require('packer').startup(function(use)
 	use ('nvim-tree/nvim-web-devicons')
 
 	-- Get git wrapper
-	use ('tpope/vim-fugitive')
+	use ({
+		'NeogitOrg/neogit',
+		requires = {
+			{'nvim-lua/plenary.nvim'},         -- Required
+			{'nvim-telescope/telescope.nvim'}, -- Optional
+			{'sindrets/diffview.nvim'},        -- Optional
+			{'ibhagwan/fzf-lua'},              -- Optional
+		},
+		config = true
+	})
+
 	use ({
 		'lewis6991/gitsigns.nvim',
 		tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
