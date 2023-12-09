@@ -27,7 +27,7 @@ local function open_nvim_tree_on_startup(data)
 
 end
 
-vim.keymap.set('n', '<leader>fs', vim.cmd.NvimTreeFocus, { desc = 'Focus file explorer' })
+vim.keymap.set({ 'n', 't' }, '<leader>fs', vim.cmd.NvimTreeFocus, { desc = 'Focus file explorer' })
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree_on_startup })
 
 -- Nvim-tree setup
@@ -72,9 +72,7 @@ local function on_attach(bufnr)
 	vim.keymap.set('n', 'K',						api.node.navigate.sibling.first,			opts('First Sibling'))
 	-- opening & previewing files
 	vim.keymap.set('n', '<Right>',				api.node.open.preview,						opts('Open Preview'))
-	vim.keymap.set('n', '<Right><Right>',		api.node.open.edit,							opts('Open'))
 	vim.keymap.set('n', 'l',						api.node.open.preview,						opts('Open Preview'))
-	vim.keymap.set('n', 'll',						api.node.open.edit,							opts('Open'))
 	vim.keymap.set('n', '<CR>',					on_enter,										opts('CD or Open'))
 	-- creating files & folders
 	vim.keymap.set('n', 'n',						api.fs.create,									opts('Create'))
