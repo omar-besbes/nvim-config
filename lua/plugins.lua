@@ -70,6 +70,12 @@ return require('packer').startup(function(use)
 		}
 	})
 
+	-- Get formatter
+	use ({
+		'jose-elias-alvarez/null-ls.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	})
+
 	-- Get custom status line
 	use ({
 		'nvim-lualine/lualine.nvim',
