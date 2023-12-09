@@ -76,6 +76,15 @@ return require('packer').startup(function(use)
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	})
 
+	-- Get refactoring tool
+	use ({
+		'ThePrimeagen/refactoring.nvim',
+		requires = {
+			{ 'nvim-lua/plenary.nvim' },
+			{ 'nvim-treesitter/nvim-treesitter' }
+		}
+	})
+
 	-- Lua
 	use ({
 		'folke/trouble.nvim',
